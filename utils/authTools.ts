@@ -1,8 +1,6 @@
-import { PrismaClient } from "@prisma/client"
 import jwt from "jsonwebtoken"
 import bcrypt from "bcryptjs"
-
-const prisma = new PrismaClient()
+import prisma from "@lib/db"
 
 const SECRET = process.env.JWT_SECRET || "use_an_ENV_VAR"
 
@@ -28,7 +26,7 @@ export const getUserFromToken = async (token: {
     })
 
     return user
-  } catch (error) {
+  } catch {
     throw new Error("Invalid or expired token")
   }
 }
@@ -53,12 +51,11 @@ export const signin = async ({
   }
 
   const token = createTokenForUser(match.id)
-  const { password: pw, ...user } = match
+  const { password: _pw, ...user } = match
 
   return { user, token }
 }
 
-// Sign-up functionality
 export const signup = async ({
   email,
   password,
