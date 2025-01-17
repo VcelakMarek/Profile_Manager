@@ -23,7 +23,9 @@
       "@types/*": ["./types/*"],
       "@components/*": ["./components/*"],
       "@utils/*": ["./utils/*"],
-      "@actions/*": ["./actions/*"]
+      "@actions/*": ["./actions/*"],
+      "@lib/*": ["./lib/*"],
+      "@schemas/*": ["./schemas/*"]
     }
   },
   "include": [
