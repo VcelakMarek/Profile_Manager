@@ -41,7 +41,7 @@ const SigninForm = () => {
         )}
       </Button>
       <div>
-        <Link href="/signup">{`Don't have an account?`}</Link>
+        <Link href="/signup">Don&apos;t have an account?</Link>
       </div>
       {errorMessage?.message && (
         <p className="text-red">{errorMessage.message}</p>
