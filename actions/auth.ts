@@ -36,7 +36,7 @@ export const registerUser = async (_prevState: unknown, formData: FormData) => {
     return { message: "Failed to sign you up" }
   }
 
-  redirect("/")
+  redirect("/setup-profile")
 }
 
 export const signinUser = async (_prevState: unknown, formData: FormData) => {
