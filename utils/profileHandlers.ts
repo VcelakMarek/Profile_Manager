@@ -1,21 +1,12 @@
-import { useRouter } from "next/navigation"
-import {
+import { editProfile, createProfile, deleteProfile } from "@actions/profile"
+import type {
   EditProfileFormValues,
   CreateProfileFormValues,
 } from "@schemas/profileSchemas"
-import { editProfile, createProfile, deleteProfile } from "@actions/profile"
-
-type HandleEditProfileProps = {
-  id: string
-  data: EditProfileFormValues
-  isSetup?: boolean
-  router: ReturnType<typeof useRouter>
-}
-
-type HandleCreateProfileProps = {
-  data: CreateProfileFormValues
-  router: ReturnType<typeof useRouter>
-}
+import type {
+  HandleEditProfileProps,
+  HandleCreateProfileProps,
+} from "@/types/ProfileTypes"
 
 export const handleEditProfile = async ({
   id,
