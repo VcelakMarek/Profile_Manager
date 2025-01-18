@@ -18,7 +18,7 @@ const compat = new FlatCompat({
   allConfig: js.configs.all,
 })
 
-export default [
+const eslintConfig = [
   ...fixupConfigRules(
     compat.extends(
       "eslint:recommended",
@@ -28,6 +28,7 @@ export default [
       "plugin:import/warnings",
       "plugin:import/typescript",
       "plugin:@typescript-eslint/recommended",
+      "next/core-web-vitals",
       "prettier",
     ),
   ),
@@ -100,6 +101,9 @@ export default [
           ],
         },
       ],
+      "@next/next/no-img-element": 0,
     },
   },
 ]
+
+export default eslintConfig
