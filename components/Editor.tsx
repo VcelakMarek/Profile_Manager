@@ -5,8 +5,8 @@ import { Italic } from "@tiptap/extension-italic"
 import { Strike } from "@tiptap/extension-strike"
 import { Heading } from "@tiptap/extension-heading"
 import { UseFormSetValue } from "react-hook-form"
-import { ProfileFormValues } from "@schemas/profileSchemas"
 import Button from "@components/Button"
+import type { ProfileFormValues } from "@schemas/profileSchemas"
 
 type Props = {
   profileData?: {

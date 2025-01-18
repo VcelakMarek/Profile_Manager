@@ -6,11 +6,11 @@ import { handleEditProfile, handleCreateProfile } from "@utils/profileHandlers"
 import Editor from "@components/Editor"
 import Button from "@components/Button"
 import {
-  editProfileSchema,
   CreateProfileSchema,
-  CreateProfileFormValues,
+  editProfileSchema,
+  type ProfileFormValues,
+  type CreateProfileFormValues,
 } from "@schemas/profileSchemas"
-import type { ProfileFormValues } from "@schemas/profileSchemas"
 
 type Props = {
   id?: string | null
